@@ -1,3 +1,5 @@
 solr/data/*
 logs/*.log
 .DS_Store
+solr/blacklight-core/data/
+solr-webapp/
