@@ -109,6 +109,7 @@
          title_series_t^10
          isbn_t
          text
+         sourceResource_collection_title_s
        </str>
        <str name="pf">
          title_unstem_search^1000000
@@ -132,6 +133,7 @@
          title_series_unstem_search^250
          title_series_t^100
          text^10
+         sourceResource_collection_title_s
        </str>
        <str name="author_qf">
          author_unstem_search^200
@@ -185,7 +187,7 @@
          subject_addl_unstem_search^100
          subject_addl_t^10
        </str>
-       
+
        <int name="ps">3</int>
        <float name="tie">0.01</float>
 
@@ -227,8 +229,8 @@
        <str name="facet.field">subject_geo_facet</str>
        <str name="facet.field">subject_topic_facet</str>
        <!-- CF Added to allow filtering by endpoint -->
-       <str name="facet.field">provider_s</str>
-
+       <str name="facet.field">dataProvider_s</str>
+       <str name="facet.field">sourceResource_collection_title_s</str>
        <str name="spellcheck">true</str>
        <str name="spellcheck.dictionary">default</str>
        <str name="spellcheck.onlyMorePopular">true</str>
@@ -506,7 +508,6 @@
        <int name="ps">3</int>
        <float name="tie">0.01</float>
 
-       <!-- NOT using marc_display because it is large and will slow things down for search results -->
        <str name="fl">*</str>
 
        <str name="facet">true</str>
@@ -521,7 +522,7 @@
        <str name="facet.field">subject_topic_facet</str>
        <!-- CF Added to allow filtering by endpoint -->
        <str name="facet.field">provider_s</str>
-
+       <str name="facet.field">sourceResource_location_facet_display</str>
        <str name="spellcheck">true</str>
        <str name="spellcheck.dictionary">default</str>
        <str name="spellcheck.onlyMorePopular">true</str>
@@ -673,6 +674,10 @@
        </lst>
       -->
   </searchComponent>
+
+
+<requestHandler name="/mlt" class="solr.MoreLikeThisHandler">
+</requestHandler>
 
 </config>
 
