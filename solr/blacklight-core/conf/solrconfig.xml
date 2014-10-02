@@ -109,8 +109,6 @@
          title_series_t^10
          isbn_t
          text
-         sourceResource_collection_title_s
-         dataProvider_s
        </str>
        <str name="pf">
          title_unstem_search^1000000
@@ -134,8 +132,6 @@
          title_series_unstem_search^250
          title_series_t^100
          text^10
-         sourceResource_collection_title_s
-         dataProvider_s
        </str>
        <str name="author_qf">
          author_unstem_search^200
@@ -189,7 +185,7 @@
          subject_addl_unstem_search^100
          subject_addl_t^10
        </str>
-
+       
        <int name="ps">3</int>
        <float name="tie">0.01</float>
 
@@ -230,9 +226,6 @@
        <str name="facet.field">subject_era_facet</str>
        <str name="facet.field">subject_geo_facet</str>
        <str name="facet.field">subject_topic_facet</str>
-       <!-- CF Added to allow filtering by endpoint -->
-       <str name="facet.field">dataProvider_s</str>
-       <str name="facet.field">sourceResource_collection_title_s</str>
        <str name="spellcheck">true</str>
        <str name="spellcheck.dictionary">default</str>
        <str name="spellcheck.onlyMorePopular">true</str>
@@ -464,6 +457,9 @@
          title_t^25000
          subject_topic_facet^10000
          creator_unstem_search^250
+         contributor_unstem_search^50
+         sourceResource_collection_title_unstem_search^50
+         dataProvider_unstem_search^50
          sourceResource_description_txt
          text
          id
@@ -473,11 +469,13 @@
          title_t^250000
          subject_unstem_search^10000
          subject_t^5000
-         author_unstem_search^2500
-         author_t^1000
+         creator_unstem_search^2500
+         contributor_unstem_search^500
          sourceResource_description_txt^10
          text^10
          id
+         sourceResource_collection_title_unstem_search
+         dataProvider_unstem_search
        </str>
        <str name="creator_qf">
          creator_unstem_search^200
@@ -486,6 +484,14 @@
        <str name="creator_pf">
          creator_unstem_search^2000
          creator_t^200
+       </str>
+       <str name="collection_qf">
+         sourceResource_collection_title_unstem_search^200
+         dataProvider_unstem_search^100
+       </str>
+       <str name="collection_pf">
+         sourceResource_collection_title_unstem_search^200
+         dataProvider_unstem_search^100
        </str>
        <str name="title_qf">
          title_unstem_search^50000
