@@ -622,9 +622,9 @@
       <str name="buildOnOptimize">true</str>
     </lst>
     <lst name="spellchecker">
-      <str name="name">author</str>
-      <str name="field">author_spell</str>
-      <str name="spellcheckIndexDir">./spell_author</str>
+      <str name="name">creator</str>
+      <str name="field">creator_spell</str>
+      <str name="spellcheckIndexDir">./spell_creator</str>
       <str name="accuracy">0.7</str>
       <str name="buildOnOptimize">true</str>
     </lst>
